@@ -1,0 +1,17 @@
+name: Choose environment
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'development'
+
+jobs:
+  choose-environment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Choose environment
+        run: |
+          echo "::set-output name=environment::${{ github.event.inputs.environment }}"
