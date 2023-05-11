@@ -7,18 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2-beta
-        with:
-          node-version: '16'
-      
-      - name: NPM Install
-        run: npm install
-
-  deploy-development:
-    runs-on: ubuntu-latest
-    needs: build
     environment: development
     env:
       AUTH0_CLIENT_SECRET: ${{ secrets.AUTH0_CLIENT_SECRET }}
