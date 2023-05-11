@@ -1,9 +1,10 @@
 {
   "AUTH0_DOMAIN": "auth0-dhiru.us.auth0.com",
   "AUTH0_CLIENT_ID": "v97wRpqFM0g2rVUVXc8BgUp1uyrMDD0H",
+  "AUTH0_CLIENT_SECRET": "3iUbbTO19CIvfwbD-rPMMR6AgA9X_EpNjjp5qvPR4RCAOHH2jwpBBsBZv8Uv0mMJ",
   "AUTH0_ALLOW_DELETE": false,
   "AUTH0_KEYWORD_REPLACE_MAPPINGS": {
-    "AUTH0_DOMAIN": "http://localhost:4200/"
+    "AUTH0_DOMAIN": "http://localhost:4100/"
   },
   "AUTH0_EXCLUDED": [
     "database",
