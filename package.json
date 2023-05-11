@@ -1,0 +1,15 @@
+{
+  "name": "auth0_config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy:development": "a0deploy import -c=config.json --input_file local/tenant.yaml"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "auth0-deploy-cli": "^7.17.2"
+  }
+}

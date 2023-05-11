@@ -1,4 +1,4 @@
-name: Auth0TT Deploy CLI
+name: Auth0 Deploy CLI
 on:
   push:
     branches:
@@ -23,15 +23,7 @@ jobs:
     env:
       AUTH0_CLIENT_SECRET: ${{ secrets.AUTH0_CLIENT_SECRET }}
 
-    steps: 
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2-beta
-        with:
-          node-version: '16'
-      
-      - name: NPM Install
-        run: npm install
-
+    steps:       
       - name: Deploy to Development
         run: npm run deploy:development
 
