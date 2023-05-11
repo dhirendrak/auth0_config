@@ -1,7 +1,6 @@
 {
   "AUTH0_DOMAIN": "auth0-dhiru-stag.us.auth0.com",
   "AUTH0_CLIENT_ID": "B2PPjDwqvOrTwCfoId49OiqjyqsZm1K9",
-  "AUTH0_CLIENT_SECRET": "qW6uZBJ2ihJwNSLj04cf7-pzfHLchVW6t_wnIKkuX3XbiX2qW9xwAtFoBZuiD8pL",
   "AUTH0_ALLOW_DELETE": false,
   "AUTH0_KEYWORD_REPLACE_MAPPINGS": {
     "AUTH0_DOMAIN": "http://localhost:4200/"
