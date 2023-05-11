@@ -23,7 +23,15 @@ jobs:
     env:
       AUTH0_CLIENT_SECRET: ${{ secrets.AUTH0_CLIENT_SECRET }}
 
-    steps:       
+    steps: 
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '16'
+      
+      - name: NPM Install
+        run: npm install
+
       - name: Deploy to Development
         run: npm run deploy:development
 
