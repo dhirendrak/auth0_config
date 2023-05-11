@@ -4,7 +4,7 @@
   "AUTH0_CLIENT_SECRET": "3iUbbTO19CIvfwbD-rPMMR6AgA9X_EpNjjp5qvPR4RCAOHH2jwpBBsBZv8Uv0mMJ",
   "AUTH0_ALLOW_DELETE": false,
   "AUTH0_KEYWORD_REPLACE_MAPPINGS": {
-    "AUTH0_DOMAIN": "http://localhost:4100/"
+    "AUTH0_DOMAIN": "http://localhost:4200/"
   },
   "AUTH0_EXCLUDED": [
     "database",
