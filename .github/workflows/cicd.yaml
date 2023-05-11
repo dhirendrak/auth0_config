@@ -3,10 +3,12 @@ on:
   push:
     branches:
       - develop
+      - staging
 
 jobs:
-  build:
+  build-development:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/develop'
     environment: development
     env:
       AUTH0_CLIENT_SECRET: ${{ secrets.AUTH0_CLIENT_SECRET }}
@@ -22,4 +24,24 @@ jobs:
 
       - name: Deploy to Development
         run: npm run deploy:development
+
+  build-staging:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/staging'
+    environment: staging
+    env:
+      AUTH0_CLIENT_SECRET: ${{ secrets.AUTH0_CLIENT_SECRET }}
+
+    steps: 
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '16'
+      
+      - name: NPM Install
+        run: npm install
+
+      - name: Deploy to Staging
+        run: npm run deploy:staging
+        
 

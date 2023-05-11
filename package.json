@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy:development": "a0deploy import -c=config.json --input_file local/tenant.yaml"
+    "deploy:development": "a0deploy import -c=./config/config-dev.json --input_file local/tenant.yaml",
+    "deploy:staging": "a0deploy import -c=./config/config-stag.json --input_file local/tenant.yaml"
   },
   "author": "",
   "license": "ISC",
