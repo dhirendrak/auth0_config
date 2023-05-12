@@ -23,7 +23,7 @@ jobs:
         run: npm install
 
       - name: Deploy to Development
-        run: npm run deploy:development
+        run: npm run deploy:dev
 
   build-staging:
     runs-on: ubuntu-latest
