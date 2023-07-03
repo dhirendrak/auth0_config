@@ -162,11 +162,12 @@ tenant:
   enabled_locales:
     - en
   flags:
+    new_universal_login_experience_enabled: true
     universal_login: true
     revoke_refresh_token_grant: false
     dashboard_new_onboarding: false
     disable_clickjack_protection_headers: false
-  sandbox_version: "16"
+  sandbox_version: '16'
   universal_login:
     passwordless:
       allow_magiclink_verify_without_session: true
@@ -203,7 +204,7 @@ guardianPhoneFactorMessageTypes:
   message_types: []
 roles:
   - name: admin
-    description: "Admin role "
+    description: 'Admin role '
     permissions: []
   - name: user
     description: User role
@@ -214,9 +215,21 @@ prompts:
   customText: {}
   universal_login_experience: new
 migrations: {}
-actions: []
-triggers: {}
-organizations: []
+actions:
+  - name: Empty Action
+    code: ./actions/Empty Action/code.js
+    dependencies: []
+    deployed: true
+    runtime: node16
+    secrets: []
+    status: built
+    supported_triggers:
+      - id: post-login
+        version: v3
+triggers:
+  post-login:
+    - action_name: Empty Action
+      display_name: Empty Action
 attackProtection:
   breachedPasswordDetection:
     enabled: false

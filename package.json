@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy:development": "a0deploy import -c=./config/config-dev.json --input_file local/tenant.yaml",
-    "deploy:staging": "a0deploy import -c=./config/config-stag.json --input_file local/tenant.yaml"
+    "deploy:dev": "a0deploy import -c ./config/config-dev.json --input_file local/tenant.yaml",
+    "deploy:staging": "a0deploy import -c ./config/config-stag.json --input_file local/tenant.yaml",
+    "export:dev": "a0deploy export -c ./config/config-dev.json --format=yaml --output_folder=local"
   },
   "author": "",
   "license": "ISC",
